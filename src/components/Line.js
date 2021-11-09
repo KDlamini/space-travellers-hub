@@ -1,4 +1,4 @@
-import './.Line.css';
+import './Line.css';
 
 const Line = () => (
   <div className="Nav-Separator" />

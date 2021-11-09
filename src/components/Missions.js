@@ -1,3 +1,5 @@
+import MissionCard from './MissionCard';
+
 const Missions = () => (
   <div className="Table-Container">
     <table className="Mission-Table">

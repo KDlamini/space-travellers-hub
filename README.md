@@ -88,9 +88,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## Authors
 
 👤 **Leandro Barreto**
-- GitHub: [@username](https://github.com/username)
-- Twitter: [@handle](https://twitter.com/handle)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/username/)
+- GitHub: [@Leandro-Barretoo](https://github.com/Leandro-Barretoo)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/leandroobarreto/)
 
 👤 **Simo Nkosi**
 

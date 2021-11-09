@@ -1,10 +1,12 @@
-import './App.css';
+import Navbar from './components/Navbar';
+import Line from './components/Line';
 
 function App() {
   return (
-    <div className="App">
-      Space X
-    </div>
+    <>
+      <Navbar />
+      <Line />
+    </>
   );
 }
 

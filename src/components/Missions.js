@@ -51,7 +51,7 @@ const Missions = () => {
           </tr>
         </thead>
         <tbody>
-          <MissionCard />
+          {myMissionsArr}
         </tbody>
       </table>
     </div>

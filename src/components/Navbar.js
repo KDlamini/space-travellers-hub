@@ -8,10 +8,15 @@ const Navbar = () => (
       <img className="Logo-Img" src={logo} alt="planet logo" />
       <span className="Logo-Text">Space Travelers&apos; Hub</span>
     </div>
-    <div className="Navigaion-Links">
+    <div className="Navigation-Links">
       <ul className="Link-List">
-        <li className="Link-Item">
-          <NavLink to="/my-profile">
+        <li>
+          <NavLink to="/rockets" className="Link-Item">
+            Rockets
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/my-profile" className="Link-Item">
             My Profile
           </NavLink>
         </li>

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { joinMission } from '../redux/actions/missions';
 
 const MissionCard = (props) => {
-  const { name, description } = props;
+  const { name, description, missionid } = props;
   const dispatch = useDispatch();
 
   const joinMissionHandler = (e) => {
@@ -36,11 +36,13 @@ const MissionCard = (props) => {
 MissionCard.defaultProps = {
   name: '',
   description: '',
+  missionid: '',
 };
 
 MissionCard.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
+  missionid: PropTypes.string,
 };
 
 export default MissionCard;

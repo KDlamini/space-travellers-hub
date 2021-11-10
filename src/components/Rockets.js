@@ -12,7 +12,7 @@ function Rockets() {
   }, []);
 
   return (
-    <div className="rockets-container">
+    <>
       {
         rockets.map((rocket) => (
           <Rocket
@@ -25,7 +25,7 @@ function Rockets() {
           />
         ))
       }
-    </div>
+    </>
   );
 }
 

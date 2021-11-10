@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './RocketsButton';
+import './Rockets.css';
 
 function Rocket({
   id, image, name, description, reserved,
@@ -11,8 +12,8 @@ function Rocket({
         <img src={image} alt={name} className="rocket-img" />
       </div>
       <div className="rocket-info">
-        <h1>{name}</h1>
-        <p>
+        <h1 className="rocket-name">{name}</h1>
+        <p className="description">
           {
             reserved
               ? <span className="badge">Reserved</span>

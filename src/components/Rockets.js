@@ -12,16 +12,16 @@ function Rockets() {
   }, []);
 
   return (
-    <div className="rockets">
+    <div className="rockets-container">
       {
         rockets.map((rocket) => (
           <Rocket
             key={rocket.id}
             id={rocket.id}
-            img_src={rocket.image[0]}
-            name={rocket.name}
+            image={rocket.flickr_images[0]}
+            name={rocket.rocket_name}
             description={rocket.description}
-            reserved={rocket.reserved}
+            reserved={rocket.active}
           />
         ))
       }

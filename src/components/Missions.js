@@ -1,4 +1,5 @@
 import MissionCard from './MissionCard';
+import './Missions.css';
 
 const Missions = () => (
   <div className="Table-Container">

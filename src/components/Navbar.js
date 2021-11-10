@@ -15,6 +15,11 @@ const Navbar = () => (
             Rockets
           </NavLink>
         </li>
+        <li className="Link-Item">
+          <NavLink to="/my-profile">
+            My Profile
+          </NavLink>
+        </li>
       </ul>
     </div>
   </div>

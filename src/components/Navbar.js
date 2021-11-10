@@ -11,17 +11,17 @@ const Navbar = () => (
     <div className="Navigation-Links">
       <ul className="Link-List">
         <li className="Nav-Item">
-          <NavLink to="/rockets" activeClassName="Link-Active" className="Link-NoActive">
+          <NavLink to="/rockets" activeclassname="Link-Active" className="Link-NoActive">
             Rockets
           </NavLink>
         </li>
         <li className="Nav-Item">
-          <NavLink to="/missions" activeClassName="Link-Active" className="Link-NoActive">
+          <NavLink to="/missions" activeclassname="Link-Active" className="Link-NoActive">
             Missions
           </NavLink>
         </li>
         <li className="Nav-Item">
-          <NavLink to="/my-profile" activeClassName="Link-Active" className="Link-NoActive">
+          <NavLink to="/my-profile" activeclassname="Link-Active" className="Link-NoActive">
             My Profile
           </NavLink>
         </li>

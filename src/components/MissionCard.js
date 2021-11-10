@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const MissionCard = (props) => {
   const { name, description } = props;
 
@@ -9,6 +11,16 @@ const MissionCard = (props) => {
       <td className="Table-Content Empty Btn"><button type="submit" className="Join">Join Mission</button></td>
     </tr>
   );
+};
+
+MissionCard.defaultProps = {
+  name: '',
+  description: '',
+};
+
+MissionCard.propTypes = {
+  name: PropTypes.string,
+  description: PropTypes.string,
 };
 
 export default MissionCard;

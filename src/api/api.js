@@ -1,4 +1,4 @@
-const url = 'https://...';
+const url = 'https://...'; // TODO: Add your url code here
 
 const getData = async (url) => {
   try {
@@ -9,6 +9,8 @@ const getData = async (url) => {
   }
 };
 
+// TODO: Change 'fetchData' to 'fetchMissions'
 export const fetchData = async () => getData(url);
 
+// TODO: Change 'fetchData2' to 'fetchRockets'
 export const fetchData2 = () => getData(url);

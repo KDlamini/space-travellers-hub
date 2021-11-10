@@ -30,6 +30,15 @@ const Missions = () => {
     }
   }, []);
 
+  const myMissionsArr = missionList.map((missions) => (
+    <MissionCard
+      key={missions.mission_id}
+      missionid={missions.mission_id}
+      name={missions.mission_name}
+      description={missions.description}
+    />
+  ));
+
   return (
     <div className="Table-Container">
       <table className="Mission-Table">

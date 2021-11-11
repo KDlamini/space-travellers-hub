@@ -1,4 +1,4 @@
-import { FETCH_ALL_ROCKETS, RESERVE_ROCKET } from '../actions/actionTypes';
+import { FETCH_ALL_ROCKETS, RESERVE_ROCKET, CANCEL_RESERVATION } from '../actions/actionTypes';
 
 const reducer = (state = [], action) => {
   switch (action.type) {
@@ -9,6 +9,14 @@ const reducer = (state = [], action) => {
       return state.map((rocket) => {
         if (rocket.id === parseInt(action.payload, 10)) {
           return { ...rocket, reserved: true };
+        }
+        return { ...rocket };
+      });
+
+    case CANCEL_RESERVATION:
+      return state.map((rocket) => {
+        if (rocket.id === parseInt(action.payload, 10)) {
+          return { ...rocket, reserved: false };
         }
         return { ...rocket };
       });

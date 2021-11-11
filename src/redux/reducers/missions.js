@@ -1,4 +1,4 @@
-import { FETCH_ALL_MISSIONS, JOIN_MISSION } from '../actions/actionTypes';
+import { FETCH_ALL_MISSIONS, JOIN_MISSION, LEAVE_MISSION } from '../actions/actionTypes';
 
 const missions = (state = [], action) => {
   switch (action.type) {

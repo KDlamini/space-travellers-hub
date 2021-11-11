@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { joinMission } from '../redux/actions/missions';
+import { joinMission, leaveMission } from '../redux/actions/missions';
 
 const MissionCard = (props) => {
   const {
@@ -37,9 +37,9 @@ const MissionCard = (props) => {
           <button
             type="submit"
             className="Join"
-            onClick="{joinMissionHandler}"
+            onClick={joinMissionHandler}
           >
-           Join Mission
+            Join Mission
           </button>
         )}
       </td>

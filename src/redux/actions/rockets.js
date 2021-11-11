@@ -19,7 +19,7 @@ export const reserveRocket = (payload) => (
   }
 );
 
-export const canceleReservation = (payload) => (
+export const cancelReservation = (payload) => (
   {
     type: CANCEL_RESERVATION,
     payload,

@@ -5,6 +5,7 @@ const missions = (state = [], action) => {
     case FETCH_ALL_MISSIONS:
       return [...state, action.payload];
     case JOIN_MISSION:
+    case LEAVE_MISSION:
       return state.map((mission) => {
         if (mission.mission_id !== action.payload) {
           return mission;

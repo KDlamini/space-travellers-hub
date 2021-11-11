@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import profileRockets from './profileRockets';
+import ProfileRockets from './ProfileRockets';
 import './MyProfile.css';
 
 function MyProfile() {
@@ -15,10 +15,10 @@ function MyProfile() {
         <table className="Mission-ProfileTable">
           <tbody>
             {
-              reservedRockets.map((rockets) => (
-                <profileRockets
-                  key={rockets.id}
-                  content={rockets.name}
+              reservedRockets.map((rocket) => (
+                <ProfileRockets
+                  key={rocket.id}
+                  name={rocket.name}
                 />
               ))
             }

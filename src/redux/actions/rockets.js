@@ -2,7 +2,7 @@ import { FETCH_ALL_ROCKETS, RESERVE_ROCKET } from './actionTypes';
 import * as api from '../../api/api';
 
 // API action creators
-const getRockets = () => async (dispatch) => {
+export const getRockets = () => async (dispatch) => {
   try {
     const data = await api.fetchRockets();
 
@@ -18,5 +18,3 @@ export const reserveRocket = (payload) => (
     payload,
   }
 );
-
-export default getRockets;

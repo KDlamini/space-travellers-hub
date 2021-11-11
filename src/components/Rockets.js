@@ -8,7 +8,9 @@ function Rockets() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getRockets());
+    if (!rockets.length) {
+      dispatch(getRockets());
+    }
   }, []);
 
   return (
@@ -21,7 +23,7 @@ function Rockets() {
             image={rocket.flickr_images[0]}
             name={rocket.rocket_name}
             description={rocket.description}
-            reserved={rocket.active}
+            reserved={rocket.reserved}
           />
         ))
       }

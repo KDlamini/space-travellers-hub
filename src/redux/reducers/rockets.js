@@ -1,7 +1,7 @@
 /* eslint-disable no-case-declarations */
 import { FETCH_ALL_ROCKETS } from '../actions/actionTypes';
 
-const reducer = (state = [], action) => {
+const rockets = (state = [], action) => {
   switch (action.type) {
     case FETCH_ALL_ROCKETS:
       const filteredData = action.payload.map((rocket) => {
@@ -20,4 +20,4 @@ const reducer = (state = [], action) => {
   }
 };
 
-export default reducer;
+export default rockets;

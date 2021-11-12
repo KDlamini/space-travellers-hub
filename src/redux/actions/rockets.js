@@ -25,5 +25,3 @@ export const cancelReservation = (payload) => (
     payload,
   }
 );
-
-export default getRockets;

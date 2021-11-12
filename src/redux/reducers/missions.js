@@ -1,24 +1,19 @@
-import { FETCH_ALL_MISSIONS } from '../actions/actionTypes';
-
-const filtered = [];
+import { FETCH_ALL_MISSIONS, JOIN_MISSION } from '../actions/actionTypes';
 
 const missions = (state = [], action) => {
   switch (action.type) {
     case FETCH_ALL_MISSIONS:
-      action.payload.forEach((mission) => {
-        const allowed = ['mission_id', 'mission_name', 'description'];
-        const newMission = Object.keys(mission)
-          .filter((key) => allowed.includes(key))
-          .reduce((obj, key) => {
-            const temp = obj;
-            temp[key] = mission[key];
-            return temp;
-          }, {});
-
-        filtered.push(newMission);
+      return [...state, action.payload];
+    case JOIN_MISSION:
+      return state.map((mission) => {
+        if (mission.mission_id !== action.payload) {
+          return mission;
+        }
+        return {
+          ...mission,
+          reserved: !mission.reserved,
+        };
       });
-
-      return [...state, ...filtered];
     default:
       return state;
   }

@@ -1,15 +1,13 @@
-import { FETCH_ALL_MISSIONS } from './actionTypes';
-import * as api from '../../api/api';
+import { FETCH_ALL_MISSIONS, JOIN_MISSION } from './actionTypes';
 
-// API action creators
-const getMissions = () => async (dispatch) => {
-  try {
-    const data = await api.fetchMissions();
+const addMission = (payload) => ({
+  type: FETCH_ALL_MISSIONS,
+  payload,
+});
 
-    dispatch({ type: FETCH_ALL_MISSIONS, payload: data });
-  } catch (error) {
-    throw new Error(error.message);
-  }
-};
+export const joinMission = (payload) => ({
+  type: JOIN_MISSION,
+  payload,
+});
 
-export default getMissions;
+export default addMission;

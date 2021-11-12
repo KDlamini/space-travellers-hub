@@ -1,12 +1,28 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import getMissions from '../redux/actions/missions';
+import * as api from '../api/api';
+import addMission from '../redux/actions/missions';
 import MissionCard from './MissionCard';
 import './Missions.css';
 
 const Missions = () => {
   const dispatch = useDispatch();
   const missionList = useSelector((state) => state.missions);
+
+  const getMissions = () => (dispatch) => {
+    api.fetchMissions()
+      .then((data) => data.forEach((mission) => {
+        const allowed = ['mission_id', 'mission_name', 'description'];
+        const newMission = Object.keys(mission)
+          .filter((key) => allowed.includes(key))
+          .reduce((obj, key) => {
+            const temp = obj;
+            temp[key] = mission[key];
+            return temp;
+          }, {});
+        dispatch(addMission(newMission));
+      }));
+  };
 
   useEffect(() => {
     if (!missionList.length) {

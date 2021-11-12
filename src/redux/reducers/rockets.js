@@ -1,10 +1,10 @@
 /* eslint-disable no-case-declarations */
 import { FETCH_ALL_ROCKETS, RESERVE_ROCKET, CANCEL_RESERVATION } from '../actions/actionTypes';
 
-const reducer = (state = [], action) => {
+const rockets = (state = [], action) => {
   switch (action.type) {
     case FETCH_ALL_ROCKETS:
-      const filteredData = action.payload.map((rocket) => {
+      const filtered = action.payload.map((rocket) => {
         const {
           id, rocket_name: name, rocket_type: type, flickr_images: image, description,
         } = rocket;
@@ -12,23 +12,15 @@ const reducer = (state = [], action) => {
           id, name, type, image, description,
         };
       });
-
-      return [...state, ...filteredData];
+      return [...state, ...filtered];
 
     case RESERVE_ROCKET:
-      return state.map((rocket) => {
-        if (rocket.id === parseInt(action.payload, 10)) {
-          return { ...rocket, reserved: true };
-        }
-        return { ...rocket };
-      });
-
     case CANCEL_RESERVATION:
       return state.map((rocket) => {
-        if (rocket.id === parseInt(action.payload, 10)) {
-          return { ...rocket, reserved: false };
+        if (rocket.id !== parseInt(action.payload, 10)) {
+          return rocket;
         }
-        return { ...rocket };
+        return { ...rocket, reserved: !rocket.reserved };
       });
 
     default:
@@ -36,4 +28,4 @@ const reducer = (state = [], action) => {
   }
 };
 
-export default reducer;
+export default rockets;

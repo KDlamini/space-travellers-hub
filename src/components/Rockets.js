@@ -5,6 +5,7 @@ import { getRockets } from '../redux/actions/rockets';
 
 function Rockets() {
   const rockets = useSelector((state) => state.rockets);
+
   const dispatch = useDispatch();
 
   useEffect(() => {

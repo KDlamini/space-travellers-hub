@@ -12,7 +12,6 @@ const rockets = (state = [], action) => {
           id, name, type, image, description,
         };
       });
-
       return [...state, ...filtered];
 
     case RESERVE_ROCKET:

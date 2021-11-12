@@ -4,6 +4,7 @@ const missions = (state = [], action) => {
   switch (action.type) {
     case FETCH_ALL_MISSIONS:
       return [...state, action.payload];
+
     case JOIN_MISSION:
     case LEAVE_MISSION:
       return state.map((mission) => {
@@ -15,6 +16,7 @@ const missions = (state = [], action) => {
           reserved: !mission.reserved,
         };
       });
+
     default:
       return state;
   }

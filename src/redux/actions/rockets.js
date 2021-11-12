@@ -1,4 +1,4 @@
-import { FETCH_ALL_ROCKETS, RESERVE_ROCKET } from './actionTypes';
+import { FETCH_ALL_ROCKETS, RESERVE_ROCKET, CANCEL_RESERVATION } from './actionTypes';
 import * as api from '../../api/api';
 
 // API action creators
@@ -15,6 +15,13 @@ const getRockets = () => async (dispatch) => {
 export const reserveRocket = (payload) => (
   {
     type: RESERVE_ROCKET,
+    payload,
+  }
+);
+
+export const cancelReservation = (payload) => (
+  {
+    type: CANCEL_RESERVATION,
     payload,
   }
 );

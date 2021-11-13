@@ -11,7 +11,7 @@ const Navbar = () => (
     <div className="Navigation-Links">
       <ul className="Link-List">
         <li className="Nav-Item">
-          <NavLink to="/rockets" activeclassname="Link-Active" className="Link-NoActive">
+          <NavLink to="/" activeclassname="Link-Active" className="Link-NoActive">
             Rockets
           </NavLink>
         </li>

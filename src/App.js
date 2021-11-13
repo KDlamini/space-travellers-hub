@@ -11,7 +11,6 @@ function App() {
       <Navbar />
       <Line />
       <Routes>
-        <Route path="/rockets" element={<Rockets />} />
         <Route path="/missions" element={<Missions />} />
         <Route path="/my-profile" element={<MyProfile />} />
         <Route path="/" element={<Rockets />} />
